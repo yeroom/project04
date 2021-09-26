@@ -1,0 +1,397 @@
+@charset "utf-8";
+
+header{
+  width:100%; height: 60px;
+  position: fixed;
+   top: 0; left: 0; 
+   z-index: 999;
+   transition: all 0.3s;
+}
+
+header:hover{
+   background-color: #fff; 
+   box-shadow: 0 5px 5px rgba(0,0,0,0.2); 
+   
+  }
+header h1{
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 250px
+}
+header ul{
+  position: absolute;
+  top:0; right: 50px;
+}
+header ul li{
+  display: inline-block;
+}
+header ul li a{
+  line-height: 60px;
+  font-size: 12px; 
+  display: block; 
+  padding: 0 18px;
+}
+header ul li:hover a{
+  color: rgb(209, 189, 159);
+}
+header ul li.on a{
+  color:  #ba998c;
+}
+header .nav_btn{
+  position: absolute;
+  top:20px; left: 100px; transform: translateY(0) rotate(0); 
+  transition: transform 0.3s;
+
+}
+header .nav_btn span{
+  display: block;
+  width: 25px; height: 2px; 
+  background-color: #555;
+  font-size: 0;
+  color: transparent;
+  margin-bottom: 6px;
+}
+header .nav_btn span:first-child{
+  width: 20px;
+}
+header .nav_btn span:last-child{
+  width: 15px;
+}
+header .nav_btn:hover{
+  transform:rotate(45deg);
+}
+
+
+
+.content section{
+  width: 100%; height: 100%; 
+  background-color: #fff;
+  position: absolute; 
+  top:0; left: 0; 
+}
+.content section#sect02{top:100%;}
+.content section#sect03{top:200%;}
+.content section#sect04{top:300%;}
+.content section#sect05{top:400%;}
+.content section#sect06{top:500%; height: auto;}
+
+
+
+/* #sect01 */
+#sect01 .main_txt{
+  text-align: center;
+  position: absolute;
+  top:50%; left: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  font-size: 12px;
+}
+#sect01 .main_txt span{
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+
+/* #sect02 */
+
+#sect02 .offers{
+  width: 1000px;
+  position: absolute;
+  top:50%; left: 50%; transform: translate(-50%,-50%);
+}
+
+#sect02 ul li{
+  float: left; 
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+#sect02 ul li:last-child{
+  margin-right: 0;
+}
+#sect02 ul li a{
+  display: block;
+  width: 100%;
+  position: relative;
+}
+#sect02 ul li a img{width: 100%;}
+#sect02 .s2_txt{
+  position: absolute;
+  top: 25px; left: 30px;
+  z-index: 10;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: 300;
+
+}
+#sect02 .s2_txt span{
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+#sect02 .more1{
+  text-align: center;
+  width: 80px;
+  line-height: 20px;
+  border: 1px solid #fff;
+  margin-top: 20px;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+}
+#sect02 .offers ul li a .over{
+  width: 100%;
+  height: 100%;
+  background-color: #ba998c;
+  position: absolute;
+  top:0; left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+#sect02 .offers ul li a:hover .over{
+  opacity: 0.7;
+}
+#sect02 .offers ul li a:hover .more1{
+  background-color: #555;
+  border: 1px solid #555;
+}
+#sect02 .swiper-button-next::after, #sect02 .swiper-button-prev::after{
+  color: #555;
+  font-size: 25px;
+  position: absolute;
+ 
+}
+#sect02 .swiper-button-next::after{
+ right: 200px
+}
+#sect02 .swiper-button-prev::after{
+  left: 200px
+}
+
+/* #sect03 */
+#sect03{
+  background: url(../img/bg_membership.jpg) no-repeat center /cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+#sect03.on > div{
+  top:50%;
+  opacity: 1;
+  
+}
+#sect03 > div{
+  width: 800px; height: 450px;
+  background-color: #fff;
+  position: absolute;
+  top:70%; left: 50%; transform: translate(-50%,-50%);
+  padding: 80px 60px 0;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 10px;
+}
+#sect03 h3{
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+
+
+}
+.s3_txt{
+  font-size: 12px;
+  margin-bottom: 30px;
+  color: #ba998c;
+
+}
+.s3_txt1{
+  font-size: 16px;
+  margin-bottom: 30px;
+
+}
+.s3_txt2{
+  font-weight: 100;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.more2{
+  display: block;
+  width: 100px;
+  line-height: 30px;
+  font-size: 12px;
+  color: #555;
+  text-align: center;
+  border: 1px solid #555;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+.more2:hover{
+  color: #fff;
+  background-color: #555;
+}
+
+
+/* #sect04 */
+#sect04 .bg_color{
+  width: 50%;
+  height: 100%;
+  background-color: #f5f0e7e1;
+}
+#sect04 .inner{
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  top:50%; left: 50%; transform: translate(-50%,-50%);
+}
+.room_img{
+  display: block;
+  float: left;
+  width: 70% !important;
+}
+
+.room_txt{
+  width: 30%;
+  height: 100%;
+  float: left;
+  padding: 40px 30px;
+  position: relative;
+}
+.room_txt h4{
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.room_txt .s4_txt1{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.room_txt .s4_txt2{
+  font-size: 12px;
+  color: #ba998c;
+}
+#sect04 .swiper-button-next{
+ left: 80px;
+}
+#sect04 .swiper-button-prev{
+ left: 30px;
+}
+#sect04 .swiper-button-next:after,#sect04 .swiper-button-prev:after{
+  display: none;
+}
+.more3{
+  display: block;
+  width: 100px;
+  line-height: 30px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #555;
+  margin-top: 100px;
+  transition: all 0.3s;
+  color: #555;
+}
+.more3:hover{
+  color: #fff;
+  background-color: #555;
+}
+
+/* #sect05 */
+#sect05{
+  background: url(../img/bg_wedding2.jpg) no-repeat center / cover;
+}
+#sect05 .s5_txt{
+  color: #fff;
+  position: absolute;
+  top:50%; left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  background-color: rgba(0,0,0,0.4);
+  width: 1000px;
+  height: 500px;
+  padding: 60px;
+}
+#sect05 .s5_txt h4{
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#sect05 .s5_txt p{
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 70px;
+}
+.brand{
+ margin: 0 200px;
+}
+.brand li{
+  float: left;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.brand li:nth-child(3n){
+  margin-right: 0;
+}
+.brand li::before{
+  display: block;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100px; height: 1px;
+  background-color: #fff;
+}
+.brand li a{
+  display: block;
+}
+.brand li img{
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.brand li:hover img{
+  transform: scale(1.2);
+}
+.brand li img.on{
+  position: absolute;
+  top:0; left: 0;
+}
+
+
+/* #sect06 */
+#sect06{
+  padding: 100px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+/*------ swiper css ------*/
+
+:root{--swiper-theme-color: #fff !important;}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
