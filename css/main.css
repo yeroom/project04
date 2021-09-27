@@ -10,9 +10,11 @@ header{
 
 header:hover{
    background-color: #fff; 
-   box-shadow: 0 5px 5px rgba(0,0,0,0.2); 
-   
-  }
+   box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+header.fixed{
+  background-color: #fff;transition: all 0.5s;
+}
 header h1{
   position: absolute;
   top: 50%; left: 50%; transform: translate(-50%,-50%);
@@ -84,7 +86,9 @@ header .nav_btn:hover{
   top:50%; left: 50%;
   transform: translate(-50%,-50%);
   color: #fff;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
 }
 #sect01 .main_txt span{
   font-size: 60px;
@@ -162,10 +166,10 @@ header .nav_btn:hover{
  
 }
 #sect02 .swiper-button-next::after{
- right: 200px
+ right: 250px
 }
 #sect02 .swiper-button-prev::after{
-  left: 200px
+  left: 250px
 }
 
 /* #sect03 */
@@ -176,8 +180,7 @@ header .nav_btn:hover{
 }
 #sect03.on > div{
   top:50%;
-  opacity: 1;
-  
+  opacity: 1; 
 }
 #sect03 > div{
   width: 800px; height: 450px;
@@ -192,19 +195,15 @@ header .nav_btn:hover{
 #sect03 h3{
   font-size: 40px;
   font-family: 'Playfair Display', serif;
-
-
 }
 .s3_txt{
   font-size: 12px;
   margin-bottom: 30px;
   color: #ba998c;
-
 }
 .s3_txt1{
   font-size: 16px;
   margin-bottom: 30px;
-
 }
 .s3_txt2{
   font-weight: 100;
@@ -353,11 +352,70 @@ header .nav_btn:hover{
 }
 
 
-/* #sect06 */
+/* footer */
 #sect06{
-  padding: 100px;
-  background-color: #333;
+  background-color: #121212;
   color: #fff;
+  padding:100px 0 120px;
+}
+#sect06 .inner{
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 14px;
+}
+.f_logo{
+  width: 130px; height: 64px;
+}
+.f_logo img{
+  margin: 10px 0;
+}
+.f_info{
+  position: absolute;
+  top:0; left: 220px;
+}
+.f_info ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.f_info ul li a{
+  display: block;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.f_info ul li:hover a{
+  opacity: 0.6;
+}
+.f_info .important a{
+  color: #ba998c;
+}
+.adress{
+  position: absolute;
+  top: 50px; left: 220px;
+  line-height: 1.6;
+  font-weight: 100;
+  opacity: 0.7;
+}
+.adress span{
+  margin-left: 20px;
+}
+.copyright{
+  font-style: italic;
+}
+.sns{
+  position: absolute;
+  top:0; right: 0;
+}
+.sns a{
+  display: inline-block;
+  width: 36px;
+  margin-right: 10px;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.sns a:hover{
+  opacity: 0.6;
 }
 
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>  
+  <title>조선 호텔앤리조트</title>  
    <link href="css/reset.css" rel="stylesheet">
    <link href="css/main.css" rel="stylesheet">
    <link href="css/swiper-bundle.min.css" rel="stylesheet">
@@ -82,6 +82,16 @@
           };  
       };
       scroll();
+
+      //header 스크롤시 배경
+      var offsetH = $("header").offset();
+      $(window).scroll(function(){
+        if($(document).scrollTop() > offsetH.top){
+          $("header").addClass("fixed");
+        }else{
+          $("header").removeClass("fixed");
+        }
+      });
 
       //sect03 이벤트
       $(window).scroll(function(){
@@ -275,7 +285,29 @@
     </section>
 
     <section id="sect06" class="footer">
-      <div>ddsfg<br></div>
+      <div class="inner">
+        <div class="f_logo"><img src="img/logo_footer.png"></div>
+        <div class="f_info">
+          <ul>
+            <li><a href="#">고객센터</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">멤버십 이용약관</a></li>
+            <li class="important"><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">사이트맵</a></li>
+          </ul>
+        </div><!--.f_info-->
+        <div class="adress">
+          <p>서울시 중구 소공로 106 <span>대표이사 한채양</span><span>T. 02-771-0500</span></p>
+          <p>사업자등록번호 104-81-27386 통신판매신고번호 중구 0623호</p>
+          <p class="copyright">Copyright © 2020 JOSUN HOTELS & RESORTS Co. All rights reserved</p>
+        </div>
+        
+        <div class="sns">
+          <a><img src="img/ico_sns_insta.png"></a>
+          <a><img src="img/ico_sns_kakao.png"></a>
+          <a><img src="img/ico_sns_youtube.png"></a>
+        </div>
+      </div><!--.inner-->
     </section>
   </div>
   </div>
